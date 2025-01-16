@@ -6,6 +6,7 @@
     <title>MDF 2025</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <style>
+        /* Color Variables */
         :root {
             --primary: #2C3E50;    /* Deep blue for main elements */
             --secondary: #E74C3C;  /* Coral red for accents */
@@ -15,7 +16,7 @@
             --white: #FFFFFF;      /* White for contrast */
             --accent: #3498DB;     /* Light blue for highlights */
         }
-      
+
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
         * {
@@ -30,34 +31,68 @@
             padding: 2rem;
             max-width: 1200px;
             margin: 0 auto;
+            background-color: var(--background);
+            color: var(--text-primary);
         }
 
         h1 {
             font-weight: 700;
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            color: #333;
+            color: var(--primary);
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 0.5rem;
         }
 
         p {
             font-weight: 400;
             margin-bottom: 1rem;
-            color: #666;
+            color: var(--text-primary);
         }
 
         .weight-demo {
             margin-top: 2rem;
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .weight-demo p {
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
         }
 
-        .light { font-weight: 300; }
-        .regular { font-weight: 400; }
-        .medium { font-weight: 500; }
-        .semibold { font-weight: 600; }
-        .bold { font-weight: 700; }
+        .weight-demo p:hover {
+            background-color: var(--background);
+        }
+
+        .light { 
+            font-weight: 300; 
+            color: var(--text-secondary);
+        }
+
+        .regular { 
+            font-weight: 400; 
+            color: var(--text-primary);
+        }
+
+        .medium { 
+            font-weight: 500; 
+            color: var(--primary);
+        }
+
+        .semibold { 
+            font-weight: 600; 
+            color: var(--accent);
+        }
+
+        .bold { 
+            font-weight: 700; 
+            color: var(--secondary);
+        }
     </style>
 </head>
 <body>
